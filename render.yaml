@@ -1,0 +1,11 @@
+# Exported from Render on 2024-10-30T13:56:30Z
+services:
+- type: web
+  name: VueJs2024
+  runtime: node
+  repo: https://github.com/kingian1215/VueJs2024
+  plan: free
+  region: singapore
+  buildCommand: npm install --production=false && npm run build
+  startCommand: npm run serve
+version: "1"
