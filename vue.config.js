@@ -29,11 +29,22 @@ module.exports = {
       }
     }
   },
+  // devServer: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://backend.api.url',
+  //       changeOrigin: true,
+  //     },
+  //   },
+  // },
   devServer: {
-    proxy: {
+    host: '0.0.0.0',  // 設定為所有可用的 IP 地址，方便外部訪問
+    // port: 8080,       // 設定開發伺服器的埠號
+    open: false,       // 啟動後不自動打開瀏覽器
+    proxy: {          // 配置代理
       '/api': {
-        target: 'http://backend.api.url',
-        changeOrigin: true,
+        target: 'http://localhost:3000', // 代理目標
+        changeOrigin: false, // 將主機標頭的來源更改為目標 URL
       },
     },
   },
