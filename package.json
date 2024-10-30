@@ -9,7 +9,8 @@
     "start": "node server.js"
   },
   "engines": {
-  "node": ">=19.0.0 <21.0.0"
+  "node": ">=16.0.0 <18.0.0",
+  "npm": ">=7.0.0"
 },
   "dependencies": {
     "core-js": "^3.8.3",

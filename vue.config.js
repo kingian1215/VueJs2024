@@ -28,5 +28,13 @@ module.exports = {
         }
       }
     }
-  }
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://backend.api.url',
+        changeOrigin: true,
+      },
+    },
+  },
 };
